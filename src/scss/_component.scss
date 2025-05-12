@@ -1,0 +1,91 @@
+$darkGreen: #16423C;
+$backGround_Color: #E9EFEC;
+$white: #ffffff;
+$darkGreen_light: lighten($darkGreen, 25%);
+$backGround_Color_dark: darken($backGround_Color, 20%);
+$backGround_Color_dark70: darken($backGround_Color, 70%);
+$backGround_Color_dark50: darken($backGround_Color, 50%);
+$font-Family: 'Times New Roman', Times, serif;
+/* Make 8 variables 7 that store color and 1  that stoer font-family  */
+
+@mixin layout($gridRow, $padding) {
+    grid-row: $gridRow;
+    grid-column: 1/-1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    background-color: $backGround_Color_dark;
+@if $padding {
+padding: 2em;
+
+}
+}
+/* mixin with two argument and store (grid-colum,margin-left, margin-right , margin-top) with if that store padding  */
+
+
+@keyframes circle {
+0%{
+background-color: rgb(252, 134, 0);
+transform: translate(0px ,  160px) scale(1,1);
+
+
+}
+25%{ 
+    background-color: blue;
+    transform: translate(40px ,  120px) scale(1.5,1.5)
+
+}
+
+50%{
+background-color: green;
+transform: translate(80px ,  80px)scale(2,2)
+}
+
+75% {
+background-color: red;
+transform:  translate(120px ,  40px)scale(2.5,2.5)
+}
+
+100% {
+
+    background-color: yellow;
+    transform: translate(160px ,  0px)  scale(3,3);
+ 
+}
+}
+/* Keyframes that make element move diagnal and get bigger.  */
+
+@keyframes shadow{
+0%, 100%{
+    text-shadow: 4px 4px 4px rgb(255, 0, 0);
+
+}
+
+25%, 75% {
+
+    text-shadow: 6px 6px 6px rgb(0, 0, 255);
+
+}
+
+50% {
+    text-shadow: 8px 8px 8px black;
+
+}
+
+}
+/* Keyframes that make text-shadow move and change color.  */
+
+@keyframes rotate{
+
+from {
+transform: rotate(0deg);
+
+}
+
+
+to {
+transform: rotate(360deg) scale(0.25, 0.25);
+
+}
+}
+/* Keyframes that make element rotate and get smaller.  */

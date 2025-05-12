@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass</title>
+   <link rel="stylesheet" href="scss/main.scss">
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <div class ="container-1">
+    <header class = "sass-box1">
+        <h1>Grafiska effekter</h1>
+               <!-- Creat a h1 tag -->
+    <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+               <span class="menu-text"> Meny</span>
+               </button>
+                  <!-- button that going become burger-menu with  text Meny -->
+        <nav id="nav-menu">
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">Stäng Meny</span>
+            </button>
+              <!-- button that going become burger-menu (close) with text stäng Meny -->
+            <ul>
+                <li><a href="index.html"><b>STARTSIDA</b></a></li>
+                <li><a href="sass.html"><b>SASS</b></a></li>
+                <li><a href="animering.html"><b>ANIMERING</b></a></li>
+                <li><a href="diagram.html"><b>DIAGRAM</b></a></li>  
+                <li><a href="karta.html"><b>KARTA</b></a></li>  
+            </ul>
+            <!-- list with links -->
+        </nav>
+    </header>
+<!-- much of my code for burgermeny and meny is taken from Malin larsson(MallarMiun) (code from teacher)-->
+
+<section class = "sass-box2">
+<h2>Hur det gått att använda SASS/SCSS</h2>
+<p>Tycker det varit intressant att arbeta med SASS/SCSS. <br>
+   Jag gillar att man kan dela upp css-filen i flera partials <br>
+   och detta kommer nog bara bli viktigare när arbetet blir större. <br>
+   Även variabler känns logiska att använda för underhålla hemsidan i efterhand. <br>
+   mixins/inheritance  kommer nog kännas bättre ju mer man använder dom. <br>
+   Slutsats: tycker inte SASS/SCSS gör något sämre än CSS så känns som ett logiskt steg framåt.
+</p>
+
+</section>
+  <!-- section with a h2 tag and p tag -->
+<section class = "sass-box3">
+<h2>För- och nackdelar med SASS/SCSS </h2>
+<h3>Några av de fördelar jag ser med sass</h3>
+<ul>
+<li>Kan använda nesting vilket gör att din kod ser bättre ut</li>
+<li>Variabler gör att det är lättare att ändra i efterhand </li>
+<li>Kunna använda partials vilket underlättar för att hitta och använda kod</li>
+<li>Extra funktioner (minxins) att använda som inte finns i CSS.</li>
+</ul>
+<h3>Några av de nackdelar jag se med sass</h3>
+<ul>
+    <li>Den enda jag ser är att man måste lära sig ett nytt hjälpmedel</li>
+    </ul>
+</section>
+
+  <!-- section with a h2 tag, h3 tag and a list -->
+<footer class = "sass-box4">
+<p  class="footer-p">
+Niklas Smith <br>
+Moment 4  Grafiska effekter med CSS <br>
+nism2400@student.miun.se
+</p>
+</footer>
+<!-- footer with p tag -->
+</div>
+</body>
+</html>

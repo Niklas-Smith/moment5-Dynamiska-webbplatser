@@ -1,0 +1,186 @@
+@use "component";
+
+ /* use  styles from component  */
+* {
+   margin: 0;
+   padding: 0;
+  font-family: component.$font-Family;
+  line-height: 1.4em;
+}
+
+ /* Give all margin, padding, font-family and line-height */
+body {
+max-width: 1800px;
+margin-left: auto;
+margin-right: auto;
+background-color: component.$backGround_Color;
+}
+/* Make homepage max-width 1800px with margin-left and marin right to auto. Use background color with a store varible color */
+
+header {
+ background-color: component.$darkGreen;
+ position: relative;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+height: 7em;    
+    }
+
+/* Give header background-color, position, display, justify-content and align-items */
+
+
+    h1{
+  color: component.$white;
+margin-left: 1em;
+font-size: 1.8em;
+    }
+    
+    /* give h1 color with marin-left and font-size */
+
+   h2{
+margin-top: 1em;
+font-size: 1.6em;
+
+   }
+     /* give h2 with marin-top and font-size */
+h3 {
+margin-top: 0.8em;
+font-size: 1.4em;
+
+}
+
+ /* give h2 with marin-top and font-size */
+p{
+   margin-top: 0.5em;
+   font-size: 1.2em;
+}
+ /* give p with marin-top and font-size */
+.footer-p {
+margin-left: 4em;
+}
+ /* give footer-p marin-left  */
+
+ul li{
+font-size: 1.2em;
+   margin-top: 0.3em;
+}
+
+/* give ul li with marin-top and font-size */
+    nav {
+      background-color: component.$darkGreen;
+font-size: 1.1em;
+   position: absolute;
+   right: 0;
+   top: 0;
+    height: 100vh;
+    width: 370px;
+    display: none;
+
+    /* The menu that is open when click on burger menu is 370px width and 100vh in height.   */
+    /* position upper right corner and give backgrround color also display none   */
+    ul{
+      width: 100%;
+      list-style-type: none;
+      text-align: center;
+      padding: 0.5em;
+
+    }
+
+       /* open burger menu  have padding, text-align and  none list-style-type  */
+   li {
+
+      padding-top: 0.5em;
+
+   }
+
+   /* nav li have padding top   */
+   li:hover {
+
+      cursor: pointer;
+   }
+   /*give cursor:pointer when hover over li */
+   a {
+      color: component.$white;
+      text-decoration: none;
+      padding: 1em;
+
+     }
+/*give color and text-decration none with same padding to nav a */
+    }
+/* nesting of elements that have with navigation to do  */
+    
+    .menu-btn {
+     display: flex;
+     align-items: center;
+     padding: 0.5em;
+     background-color: component.$darkGreen;
+     border: component.$white solid 1px;
+    cursor: pointer;
+    font-size: 1.4em;
+    color: component.$white;
+    
+    }
+    /* give pointer when hower over menu, display flex and align-items center  */
+      /* give color, background-color and padding  */
+
+    .open {
+    margin-right: 1em;
+    }
+
+    /*give margin-right to .open */
+    .menu-icon {
+    margin-right: 1.2em
+    }
+ /*give margin-right to menu-icon */
+    
+    .bars {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: component.$white;
+    margin-top: 6px;
+    }
+ /*span three lines becomes visable (span element) also  give background color width and height. */
+    
+    .menu-text {
+    font-size: 1.1em;
+    
+    }
+    
+ /*give font-size to menu-text. */
+    .close {
+    margin: 1em auto;
+    }
+/*give margin 1em auto to .close. */
+    .cross1 {
+    width: 25px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+    }
+    
+    .cross2 {
+     width: 25px;
+    transform: rotate(135deg);
+     position: relative;
+    top: -3px;
+    }
+    
+/*Make a cross of span element for close meny. */
+    
+    
+    
+.beach {
+   max-width: 400px;
+   width: 100%;
+   border-radius: 50%;
+   border: 5px  solid component.$darkGreen_light;
+ }
+   
+ /*Give beach max-width, and  border-radius(make picture round). Give picture border 5px solid */
+.mountain{
+
+   @extend .beach;
+
+}
+/* Give .mountain same as .beach*/

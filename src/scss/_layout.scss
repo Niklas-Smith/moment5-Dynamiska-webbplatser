@@ -1,0 +1,165 @@
+@use "component";
+
+ /* use  styles from component  */
+
+.container-1 {
+  display: grid;
+grid-template-columns: repeat(16, 1fr);
+grid-template-rows:  1fr;
+
+
+
+.index-box1 {
+   grid-row: 1/2;
+   grid-column: 1/-1;
+
+   
+ }
+.index-box2  {
+  @include  component.layout(2/3, true);
+ 
+
+
+}
+/* Use mixing from component layout and  set value to 2/3 (grid-row) and true (padding)  */
+
+.index-box3 {
+
+  @include  component.layout(3/4, true);
+  
+ 
+}
+/* Use mixing from component layout and  set value to 3/4 (grid-row) and true (padding)  */  
+.index-box4 {
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  background-color: component.$darkGreen;
+  color: component.$white;
+  margin-top: 2em;
+  padding: 2em;
+  }
+   
+.sass-box1{
+  grid-row: 1/2;
+  grid-column: 1/-1;
+
+}
+
+.sass-box2{
+  @include  component.layout(2/3, true);
+
+ 
+  
+}
+/* Use mixing from component layout and  set value to 2/3 (grid-row) and true (padding)  */
+.sass-box3{
+  @include  component.layout(3/4, true);
+ 
+
+  
+}
+/* Use mixing from component layout and  set value to 3/4 (grid-row) and true (padding)  */
+.sass-box4{
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  background-color: component.$darkGreen;
+  color: component.$white;
+  margin-top: 2em;
+  padding: 2em;
+  }
+
+
+.animering-box1{
+
+  grid-row: 1/2;
+   grid-column: 1/-1;
+
+}
+.animering-box2{
+  @include  component.layout(2/3, true);
+}
+/* Use mixing from component layout and  set value to 2/3 (grid-row) and true (padding)  */
+.animering-box3{
+  @include  component.layout(3/4, true);
+}
+/* Use mixing from component layout and  set value to 3/4 (grid-row) and true (padding)  */
+.animering-box4{
+  @include  component.layout(4/5, true);
+}
+/* Use mixing from component layout and  set value to 4/5 (grid-row) and true (padding)  */
+.animering-box5{
+  grid-row: 5/6;
+  grid-column: 1/-1;
+  background-color: component.$darkGreen;
+  color: component.$white;
+  margin-top: 2em;
+  padding: 2em;
+}
+
+
+}
+   
+   /* Put elements on grid-row and grid-column when below 1200px also give margin-top,backgroun-color,color and paddding to same elements,  */
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   @media only screen and (min-width: 1200px) {
+    
+  
+    .beach {
+
+      
+   max-width: 600px;
+    }
+
+    .mountain{
+
+      max-width: 600px;
+   }
+
+   /* Change  max-width to 600px for beach and mountain when  Above 1200px  */
+        .menu-btn {
+       display: none;
+        }
+   /* menu-btn display none  when  Above 1200px  */
+
+        #open-menu {
+       display: none !important;
+       }
+    /* open-menu display none  when  Above 1200px (have priority) */
+        header {
+       position: static;
+       }
+   /* header poition  static  when  Above 1200px */
+       nav {
+       display: block !important;
+       position: static;
+        height: auto;
+   width: auto;
+    }
+   
+      /* nav display block,  position static, height and width auto when  Above 1200px */
+      nav li {
+    display: inline;
+    
+        }
+   /* nav li display inline when  Above 1200px */
+      }
+
+
+      @media (prefers-color-scheme: dark) {
+    body {
+    color: rgba(95, 89, 89, 0.945);
+    background-color: component.$backGround_Color_dark70;
+
+    }
+
+ /* When you have darkmode change color and background-color */
+
+  }

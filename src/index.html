@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startsida</title>
+   <link rel="stylesheet" href="scss/main.scss">
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <div class ="container-1">
+
+
+    <header class = "index-box1">
+        <h1>Grafiska effekter</h1>
+        <!-- Creat a h1 tag -->
+
+    <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+               <span class="menu-text"> Meny</span>
+               </button>
+                <!-- button that going become burger-menu with  text Meny -->
+        <nav id="nav-menu">
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">Stäng Meny</span>
+            </button>
+             <!-- button that going become burger-menu (close) with text stäng Meny -->
+            <ul>
+                <li><a href="index.html"><b>STARTSIDA</b></a></li>
+                <li><a href="sass.html"><b>SASS</b></a></li>
+                <li><a href="animering.html"><b>ANIMERING</b></a></li>
+                <li><a href="diagram.html"><b>DIAGRAM</b></a></li>  
+                <li><a href="karta.html"><b>Karta</b></a></li>  
+            </ul>
+          <!-- list with links -->
+        </nav>
+    </header>
+<!-- much of my code for burgermeny and meny is taken from Malin larsson(MallarMiun) (code from teacher)-->
+
+<section class = "index-box2">
+<img src="images/beach.jpg" alt="picture of a beach" class="beach">
+<h2>Beach</h2>
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>  Rerum ducimus dolores repudiandae. Architecto vero et rem, <br>ipsa nisi sint atque fuga ipsum? <br>Nulla expedita nisi asperiores provident libero quo ipsa.</p>
+</section>
+
+  <!-- section with picture,h2  tag and p tag -->
+
+<section class = "index-box3">
+    <img src="images/mountain.jpg" alt="picture of a mountain"  class="mountain">
+    <h2>Mountain</h2>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>  Rerum ducimus dolores repudiandae. Architecto vero et rem, <br>ipsa nisi sint atque fuga ipsum? <br>Nulla expedita nisi asperiores provident libero quo ipsa.</p>
+    </section>
+<!-- section with picture,h2  tag and p tag -->
+
+<footer class = "index-box4">
+<p class="footer-p">
+Niklas Smith <br>
+Moment 4  Grafiska effekter med CSS
+<br>
+nism2400@student.miun.se
+</p>
+</footer>
+<!-- footer with p tag -->
+</div>
+</body>
+</html>
