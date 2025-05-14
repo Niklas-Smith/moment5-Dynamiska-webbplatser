@@ -38,13 +38,14 @@ let applicant = admission
 
 
 const courses = applicant.filter(applicant => applicant.type === "Kurs").sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6);
-const program = applicant.filter(applicant => applicant.type === "Program").sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6);
+const program = applicant.filter(applicant => applicant.type === "Program").sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,5);
 
 
 
 
-let applicantTotal = applicant.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6); 
+let coursesApplicantTotal = courses.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6); 
 
+let  programApplicantTotal =  program.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,5); 
 console.table(courses);
 
 
@@ -59,7 +60,7 @@ console.table(courses);
               labels: courses.map(courses => courses.name),
       datasets: [{
         label: 'Antal sökande',
-       data: applicantTotal.map(applicantTotal => applicantTotal.applicantsTotal),
+       data: coursesApplicantTotal.map(coursesApplicantTotal => coursesApplicantTotal.applicantsTotal),
 
         borderWidth: 1
 
@@ -79,7 +80,7 @@ console.table(courses);
               labels: program.map(program => program.name),
       datasets: [{
         label: 'Antal sökande',
-       data: applicantTotal.map(applicantTotal => applicantTotal.applicantsTotal),
+       data: programApplicantTotal.map(programApplicantTotal => programApplicantTotal.applicantsTotal),
 
         borderWidth: 1
 
@@ -89,10 +90,14 @@ console.table(courses);
   });
 
 
-  
+  console.table(programApplicantTotal)
 
 
 }
 
+  let map = L.map('map').setView([51.505, -0.09], 17  );
 
-  
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
