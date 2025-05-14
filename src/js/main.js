@@ -34,36 +34,65 @@ WriteDiagram()
 }
 
 function WriteDiagram() {
-let test = admission
+let applicant = admission
+
+
+const courses = applicant.filter(applicant => applicant.type === "Kurs").sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6);
+const program = applicant.filter(applicant => applicant.type === "Program").sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6);
+
+
+
+
+let applicantTotal = applicant.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6); 
+
+console.table(courses);
+
 
 
  
-
-
-let test2 = test.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6);
-
-console.table(test2);
-
-
-
  const ctx = document.getElementById('myChart');
 
 
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+              labels: courses.map(courses => courses.name),
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Antal sökande',
+       data: applicantTotal.map(applicantTotal => applicantTotal.applicantsTotal),
+
         borderWidth: 1
+
       }]
     },
+
   });
 
+
+
+ const ctx2 = document.getElementById('myChartCircle');
+
+
+  new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+              labels: program.map(program => program.name),
+      datasets: [{
+        label: 'Antal sökande',
+       data: applicantTotal.map(applicantTotal => applicantTotal.applicantsTotal),
+
+        borderWidth: 1
+
+      }]
+    },
+
+  });
+
+
+  
+
+
 }
-
-
 
 
   
