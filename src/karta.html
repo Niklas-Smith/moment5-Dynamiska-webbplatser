@@ -12,7 +12,7 @@
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
-        <script src="js/main.js" defer></script>
+        <script type="module" src="js/map.js" ></script>
 
 
 
@@ -52,7 +52,12 @@
             </nav>
         </header>
     <!-- much of my code for burgermeny and meny is taken from Malin larsson(MallarMiun) (code from teacher)-->
- <div id="map"></div>
+ 
+<input type="text" id="searchmap">
+<button id="button_search">Sök</button>
+ 
+ 
+    <div id="map"></div>
 
 
 

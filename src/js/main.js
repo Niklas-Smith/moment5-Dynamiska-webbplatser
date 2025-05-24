@@ -5,6 +5,7 @@
  window.onload = () => {
     
 getAdmissionInfo()
+
     }
  
  
@@ -33,6 +34,10 @@ WriteDiagram()
  
 }
 
+
+
+
+
 function WriteDiagram() {
 let applicant = admission
 
@@ -46,7 +51,7 @@ const program = applicant.filter(applicant => applicant.type === "Program").sort
 let coursesApplicantTotal = courses.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6); 
 
 let  programApplicantTotal =  program.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,5); 
-console.table(courses);
+
 
 
 
@@ -90,14 +95,11 @@ console.table(courses);
   });
 
 
-  console.table(programApplicantTotal)
+
 
 
 }
 
-  let map = L.map('map').setView([51.505, -0.09], 17  );
 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+
+
