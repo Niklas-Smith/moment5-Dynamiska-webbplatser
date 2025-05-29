@@ -80,7 +80,7 @@ let  programApplicantTotal =  program.sort((a,b) => b.applicantsTotal-a.applican
 
 
   new Chart(ctx2, {
-    type: 'doughnut',
+    type: 'pie',
     data: {
               labels: program.map(program => program.name),
       datasets: [{
