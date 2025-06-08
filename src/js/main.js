@@ -1,6 +1,14 @@
- 
+/**
+ *  Empty array that will store data from miun
+ * @type {Array}
+ */
  let admission = [];
- 
+/**
+ * 
+ * Call function getAdmissinInfo when page is load
+ * @function getAdmissinInfo
+ * 
+ */
  
  window.onload = () => {
     
@@ -8,6 +16,14 @@ getAdmissionInfo()
 
     }
  
+/**
+ * Fetch data from miun
+ * and put this data in empty array admission in json format
+ * @async
+ * @function getomdbInfo
+ * @throws {Error} if response not ok
+ * @returns {Promise} Data from api
+*/
  
  async function getAdmissionInfo()  {
 try {
@@ -36,7 +52,13 @@ WriteDiagram()
 
 
 
-
+/**
+ * Use filter() so to seperate courses and program and use slice()<br>
+ * To keep six higest from courses and five higest from program <br>
+ * Then use sort to have both them go from higest to lowest (six higest from courses and five higest rom program) <br>
+ * @function WriteDiagram
+ * @returns {chart} input data from below (courses and program) in two diffrent charts (one bar and one pie) <br>  first chart show higest applicant for courses  secend Chart show  higest applicant for program
+ */
 
 function WriteDiagram() {
 let applicant = admission
@@ -48,9 +70,9 @@ const program = applicant.filter(applicant => applicant.type === "Program").sort
 
 
 
-let coursesApplicantTotal = courses.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,6); 
+let coursesApplicantTotal = courses.sort((a,b) => b.applicantsTotal-a.applicantsTotal)
 
-let  programApplicantTotal =  program.sort((a,b) => b.applicantsTotal-a.applicantsTotal).slice(0,5); 
+let  programApplicantTotal =  program.sort((a,b) => b.applicantsTotal-a.applicantsTotal)
 
 
 
