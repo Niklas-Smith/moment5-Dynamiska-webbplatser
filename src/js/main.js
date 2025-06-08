@@ -20,7 +20,7 @@ getAdmissionInfo()
  * Fetch data from miun
  * and put this data in empty array admission in json format
  * @async
- * @function getomdbInfo
+ * @function getAdmissionInfo
  * @throws {Error} if response not ok
  * @returns {Promise} Data from api
 */
