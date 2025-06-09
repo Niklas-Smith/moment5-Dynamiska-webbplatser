@@ -3,13 +3,13 @@
  * @type {Array}
  */
  let admission = [];
+
 /**
  * 
  * Call function getAdmissinInfo when page is load
- * @function getAdmissinInfo
+ * @function window.onload
  * 
  */
- 
  window.onload = () => {
     
 getAdmissionInfo()
@@ -55,10 +55,11 @@ WriteDiagram()
 /**
  * Use filter() so to seperate courses and program and use slice()<br>
  * To keep six higest from courses and five higest from program <br>
- * Then use sort to have both them go from higest to lowest (six higest from courses and five higest rom program) <br>
+ * Then use sort to have both them go from higest to lowest (six higest from courses and five higest from program) <br>
  * @function WriteDiagram
- * @returns {chart} input data from below (courses and program) in two diffrent charts (one bar and one pie) <br>  first chart show higest applicant for courses  secend Chart show  higest applicant for program
- */
+ * @returns {chart} input data from courses in a bar chart that show higest applicant for courses 
+ * @returns {chart} input data from programs in a pie chart that show higest applicant for program 
+ */ 
 
 function WriteDiagram() {
 let applicant = admission
